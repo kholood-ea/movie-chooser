@@ -5,19 +5,24 @@ import {
 } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import * as React from "react";
+import { QueryClient, QueryClientProvider, useQuery } from "react-query";
 
 import { Heros } from "../screens/Heros";
 
 import LinkingConfiguration from "./LinkingConfiguration";
 
+const queryClient = new QueryClient();
+
 export default function Navigation({ colorScheme }) {
   return (
-    <NavigationContainer
-      linking={LinkingConfiguration}
-      theme={colorScheme === "dark" ? DarkTheme : DefaultTheme}
-    >
-      <RootNavigator />
-    </NavigationContainer>
+    <QueryClientProvider client={queryClient}>
+      <NavigationContainer
+        linking={LinkingConfiguration}
+        theme={colorScheme === "dark" ? DarkTheme : DefaultTheme}
+      >
+        <RootNavigator />
+      </NavigationContainer>
+    </QueryClientProvider>
   );
 }
 
