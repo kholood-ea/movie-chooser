@@ -9,7 +9,7 @@ import {
 import * as Animatable from "react-native-animatable";
 
 export default (props) => {
-  const {} = props;
+  const { hero } = props;
   const [animation, setAnimation] = useState("bounceIn");
 
   const handleAnimation = () => {
@@ -18,8 +18,8 @@ export default (props) => {
   return (
     <Pressable style={style.card} onPress={() => handleAnimation()}>
       <Animatable.View animation={animation} style={style.container}>
-        <Image style={style.heroImage} />
-        <Text style={style.heroName}>heroName</Text>
+        <Image source={{ uri: hero.image }} style={style.heroImage} />
+        <Text style={style.heroName}>{hero.name}</Text>
       </Animatable.View>
     </Pressable>
   );
