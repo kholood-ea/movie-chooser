@@ -26,23 +26,23 @@ export default (props) => {
 };
 const style = StyleSheet.create({
   card: {
-    width: "47%",
-    height: "90%",
-    marginHorizontal: 5,
+    flex: 1,
+    // width: "50%",
+    // height: 150,
     alignItems: "center",
-    marginBottom: 100,
-    marginTop: 5,
+    marginVertical: 3,
   },
   container: {
-    width: "100%",
-    height: "95%",
-    justifyContent: "space-around",
+    // width: "100%",
+    // height: "95%",
+    // justifyContent: "space-around",
     alignItems: "center",
   },
   heroImage: {
     backgroundColor: "white",
-    width: "100%",
-    height: "80%",
+    width: 180,
+    height: 200,
+    marginVertical: 3,
   },
   heroName: {
     fontSize: 20,

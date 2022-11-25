@@ -12,12 +12,14 @@ import { HeroCard } from "../../../components/Heros";
 
 export default () => {
   return (
-    <FlatList
-      numColumns={2}
-      style={{ backgroundColor: "#2f95dc" }}
-      data={[1, 2, 3, 4]}
-      renderItem={() => <HeroCard />}
-      // keyExtractor={(item) => item.id}
-    />
+    <View style={{ flex: 1 }}>
+      <FlatList
+        numColumns={2}
+        style={{ backgroundColor: "#2f95dc" }}
+        data={[1, 2, 3, 4, 5, 6, 7, 8]}
+        renderItem={() => <HeroCard />}
+        keyExtractor={(item) => item}
+      />
+    </View>
   );
 };
