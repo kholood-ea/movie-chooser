@@ -4,7 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 export default ({ children, navigation }) => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
       <View style={style.header}>
         <View style={style.iconView}>
           <Ionicons

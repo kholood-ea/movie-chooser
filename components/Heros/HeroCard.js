@@ -26,19 +26,17 @@ export default (props) => {
 };
 const style = StyleSheet.create({
   card: {
-    backgroundColor: "black",
-    width: "45%",
-    height: "30%",
-    justifyContent: "space-around",
-    margin: 5,
+    width: "47%",
+    height: "90%",
+    marginHorizontal: 5,
     alignItems: "center",
+    marginBottom: 100,
+    marginTop: 5,
   },
   container: {
-    backgroundColor: "black",
     width: "100%",
     height: "95%",
     justifyContent: "space-around",
-    margin: 5,
     alignItems: "center",
   },
   heroImage: {
