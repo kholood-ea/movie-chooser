@@ -7,8 +7,8 @@ export default function Heros({ navigation }) {
   const { data } = Handler();
   return (
     <View style={{ flex: 1 }}>
-      <Header title={"Select Your Hero"}>
-        <HerosList heros={data.heros} />
+      <Header title={"Select Your Hero"} navigation={navigation}>
+        <HerosList heros={data.heros} navigation={navigation} />
       </Header>
     </View>
   );
