@@ -26,7 +26,7 @@ export default (props) => {
             }
           />
         )}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => item.name}
       />
     </View>
   );
