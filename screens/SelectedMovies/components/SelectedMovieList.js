@@ -5,7 +5,7 @@ import Carousel from "react-native-snap-carousel";
 export default ({ movies }) => {
   _renderItem = ({ item, index }) => {
     return (
-      <View>
+      <View key={item.Title}>
         <Text style={styles.title}>{item.Title}</Text>
         <Image source={{ uri: item.Poster }} style={styles.slide}></Image>
       </View>
@@ -18,8 +18,6 @@ export default ({ movies }) => {
         renderItem={_renderItem}
         sliderWidth={400}
         itemWidth={350}
-        layout={"stack"}
-        loop={true}
       />
     </View>
   );
