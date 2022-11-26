@@ -11,14 +11,21 @@ import * as DATA from "../herosPlaceHolder.json";
 import { HeroCard } from "../../../components/Heros";
 
 export default (props) => {
-  const { heros } = props;
+  const { heros, navigation } = props;
   return (
     <View style={{ flex: 1 }}>
       <FlatList
         numColumns={2}
         style={{ backgroundColor: "#2f95dc" }}
         data={heros}
-        renderItem={(hero) => <HeroCard hero={hero.item} />}
+        renderItem={(hero) => (
+          <HeroCard
+            hero={hero.item}
+            onHeroPress={() =>
+              navigation.navigate("SelectedMovies", { hero: hero.item })
+            }
+          />
+        )}
         keyExtractor={(item) => item.id}
       />
     </View>
