@@ -8,7 +8,8 @@ import * as React from "react";
 import { QueryClient, QueryClientProvider, useQuery } from "react-query";
 
 import { Heros } from "../screens/Heros";
-
+import { SelectedMovies } from "../screens/SelectedMovies";
+import { MovieDetails } from "../screens/MovieDetails";
 import LinkingConfiguration from "./LinkingConfiguration";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,16 @@ function RootNavigator() {
       <Stack.Screen
         name="Root"
         component={Heros}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="SelectedMovies"
+        component={SelectedMovies}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="MovieDetails"
+        component={MovieDetails}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
