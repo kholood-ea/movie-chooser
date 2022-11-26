@@ -2,17 +2,19 @@ import React, { Component } from "react";
 import { Text, SafeAreaView, View, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-export default ({ children, title, onBackPress }) => {
+export default ({ children, title, Back, navigation, customBackPress }) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={style.header}>
         <View style={style.iconView}>
-          {onBackPress && (
+          {Back && (
             <Ionicons
               name="chevron-back-sharp"
               size={30}
               color="white"
-              onPress={onBackPress}
+              onPress={() =>
+                customBackPress ? customBackPress() : navigation.pop()
+              }
             />
           )}
         </View>
