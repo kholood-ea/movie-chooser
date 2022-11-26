@@ -7,13 +7,16 @@ export default ({ children, title, onBackPress }) => {
     <SafeAreaView style={{ flex: 1 }}>
       <View style={style.header}>
         <View style={style.iconView}>
-          <Ionicons
-            name="chevron-back-sharp"
-            size={30}
-            color="white"
-            onPress={onBackPress}
-          />
+          {onBackPress && (
+            <Ionicons
+              name="chevron-back-sharp"
+              size={30}
+              color="white"
+              onPress={onBackPress}
+            />
+          )}
         </View>
+
         <View style={style.titleView}>
           <Text style={style.title}>{title}</Text>
         </View>
