@@ -34,7 +34,9 @@ export default function SelectedMovies({ navigation, route }) {
             }
           />
         )}
-        {!shuffeling && <SelectedMovieList movies={movies} />}
+        {!shuffeling && (
+          <SelectedMovieList movies={movies} navigation={navigation} />
+        )}
       </Header>
       <ShuffleButton onShuffle={() => shuffle(movies)} />
     </>

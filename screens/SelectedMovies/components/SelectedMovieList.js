@@ -1,14 +1,18 @@
 import React, { Component } from "react";
-import { Text, View, StyleSheet, Image } from "react-native";
+import { Text, View, StyleSheet, Image, TouchableOpacity } from "react-native";
 import Carousel from "react-native-snap-carousel";
 
-export default ({ movies }) => {
+export default ({ movies, navigation }) => {
   _renderItem = ({ item, index }) => {
     return (
-      <View key={item.Title}>
-        <Text style={styles.title}>{item.Title}</Text>
-        <Image source={{ uri: item.Poster }} style={styles.slide}></Image>
-      </View>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("MovieDetails", { movie: item })}
+      >
+        <View key={item.Title}>
+          <Text style={styles.title}>{item.Title}</Text>
+          <Image source={{ uri: item.Poster }} style={styles.slide}></Image>
+        </View>
+      </TouchableOpacity>
     );
   };
   return (
