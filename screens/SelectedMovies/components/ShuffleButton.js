@@ -30,13 +30,13 @@ export default (props) => {
 const styles = StyleSheet.create({
   button: {
     backgroundColor: "#6de6e8",
-    marginTop: -100,
     alignSelf: "center",
     flexDirection: "row",
     width: "80%",
     height: "10%",
     padding: 20,
     borderRadius: 20,
+    marginBottom: 30,
   },
   shuffle: {
     fontSize: 30,
