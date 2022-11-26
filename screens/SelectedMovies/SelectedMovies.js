@@ -5,7 +5,6 @@ import { SelectedMovieList, ShuffleButton } from "./components";
 import LottieView from "lottie-react-native";
 
 import Handler from "./Handler";
-import * as data from "./moviesPlaceHolder.json";
 export default function SelectedMovies({ navigation, route }) {
   const { shuffeling, movies, shuffle } = Handler({ route });
   const animation = useRef(null);
